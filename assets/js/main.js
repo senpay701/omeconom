@@ -43,16 +43,12 @@ function IPProvider(information) {
         word.push(text[i].replace(/  +/g, ' '));
     }
 
-    console.log(word.slice(0, 20));
-
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
     .test(navigator.userAgent)) {
-        var provider = "🔻 <b>Провайдер:</b> <code>" + word.slice(0, 20) + "</code>";
-        //console.log(text);
+        var provider = "🔻 <b>Провайдер:</b> <code>" + word.slice(0, 13) + "</code>";
     } 
     else {
-        var provider = "🔻 <b>Провайдер:</b> <code>" + word.slice(0, 20) + "</code>";
-        //console.log(text);
+        var provider = "🔻 <b>Провайдер:</b> <code>" + word.slice(0, 13) + "</code>";
     }
 
     logs.push(provider);
